@@ -24,6 +24,8 @@ int main() {
         " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
     string temp = "";
 
+
+
     for (char ch : text) {
         for (char i : printable) {
             this_thread::sleep_for(chrono::milliseconds(20));
