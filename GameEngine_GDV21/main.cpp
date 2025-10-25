@@ -4,7 +4,19 @@
 #include <chrono>
 using namespace std;
 
+int multiplyByTwo(int x)
+{
+	return (x * 2);
+}
+
 int main() {
+    int x;
+    cout << "Give me a number: ";
+    cin >> x;
+
+    int y = multiplyByTwo(x);
+    cout << "That number multiplied by two is " << y;
+
 	string text = "hello world, who says im gay";
     string printable =
         "0123456789abcdefghijklmnopqrstuvwxyz"
