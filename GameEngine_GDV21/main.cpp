@@ -3,9 +3,9 @@
 #include <chrono>
 using namespace std;
 
-int multiplyByTwo(int x)
+void multiplyByTwo(int& x)
 {
-	return (x * 2);
+    x *= 2;
 }
 
 int main() {
@@ -13,8 +13,8 @@ int main() {
     cout << "Give me a number: ";
     cin >> x;
 
-    int y = multiplyByTwo(x);
-    cout << "That number multiplied by two is " << y;
+    multiplyByTwo(x);
+    cout << "That number multiplied by two is " << x << endl;
 
 	string text = "hello world im gay";
     string printable =
@@ -22,8 +22,6 @@ int main() {
         "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
     string temp = "";
-
-
 
     for (char ch : text) {
         for (char i : printable) {
@@ -36,4 +34,6 @@ int main() {
             }
         }
     }
+
+    cout << "Nice changes." << endl;
 }
