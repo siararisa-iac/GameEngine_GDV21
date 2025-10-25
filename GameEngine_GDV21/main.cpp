@@ -17,7 +17,7 @@ int main() {
     int y = multiplyByTwo(x);
     cout << "That number multiplied by two is " << y;
 
-	string text = "hello world, who says im gay";
+	string text = "hello world im gay";
     string printable =
         "0123456789abcdefghijklmnopqrstuvwxyz"
         "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
