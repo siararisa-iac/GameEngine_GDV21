@@ -25,16 +25,37 @@
     <Filter Include="Source Files\Engine">
       <UniqueIdentifier>{d7e79221-152e-4df5-b1f7-87795db1f1b0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\MathLibrary">
+      <UniqueIdentifier>{e1b0299e-6222-45f7-ba17-e914fb282089}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MathLibrary">
+      <UniqueIdentifier>{36441a83-dc4a-438e-ada7-d8bc4522389b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameplayFoundation">
+      <UniqueIdentifier>{46c110bc-cd6b-41ee-a378-ed900b3769b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameplayFoundation">
+      <UniqueIdentifier>{baba95a0-1540-4428-a31e-54f1f39710e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameDemo">
+      <UniqueIdentifier>{4465c950-db6a-4e4d-9a58-4d0be7a1bd63}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="graphics.cpp">
       <Filter>Source Files\Graphics</Filter>
     </ClCompile>
     <ClCompile Include="engine.cpp">
       <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="vector3.cpp">
+      <Filter>Source Files\MathLibrary</Filter>
+    </ClCompile>
+    <ClCompile Include="gameObject.cpp">
+      <Filter>Source Files\GameplayFoundation</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files\GameDemo</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -43,6 +64,12 @@
     </ClInclude>
     <ClInclude Include="engine.h">
       <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="vector3.h">
+      <Filter>Header Files\MathLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="gameObject.h">
+      <Filter>Header Files\GameplayFoundation</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
