@@ -19,8 +19,15 @@ public:
 
 	// Getters
 	Vector3 GetScale();
+	Vector3 GetPosition();
 
 	void Draw();
+	// Possible modification to this class
+	// Add more primitives to this class
+	void DrawSphere(float radius, int slices, int stacks);
+	//void DrawCube();
+	// Create an enum for all possible primitives available in glut and pass in that enum
+	//void Draw(Primitives.Cube)
 
 private:
 	Vector3 position;

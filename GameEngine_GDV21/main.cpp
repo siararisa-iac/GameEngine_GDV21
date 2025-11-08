@@ -31,7 +31,7 @@ void Update()
 	for (int i = 0; i < enemies.size(); i++) 
 	{
 		// Make sure to render them ever frame
-		enemies[i].Draw();
+		enemies[i].DrawSphere(1, 12, 12);
 	}
 }
 

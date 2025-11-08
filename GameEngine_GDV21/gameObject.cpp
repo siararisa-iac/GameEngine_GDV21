@@ -53,6 +53,11 @@ Vector3 GameObject::GetScale()
 	return scale;
 }
 
+Vector3 GameObject::GetPosition()
+{
+	return position;
+}
+
 void GameObject::Draw()
 {
 	// This is where we call the respective openGL functions that will render our object
@@ -64,3 +69,17 @@ void GameObject::Draw()
 	glutSolidCube(1.0f);
 	glPopMatrix();
 }
+
+
+void GameObject::DrawSphere(float radius, int slices, int stacks)
+{
+	// This is where we call the respective openGL functions that will render our object
+	glPushMatrix();
+	glTranslatef(position.x, position.y, position.z);
+	glRotatef(angle, rotation.x, rotation.y, rotation.z);
+	glScalef(scale.x, scale.y, scale.z);
+	glColor4f(color.red, color.green, color.blue, color.alpha);
+	glutSolidSphere(radius, slices, stacks);
+	glPopMatrix();
+}
+
