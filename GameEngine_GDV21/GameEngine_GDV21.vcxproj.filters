@@ -57,6 +57,9 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files\GameDemo</Filter>
     </ClCompile>
+    <ClCompile Include="color.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="graphics.h">
@@ -70,6 +73,9 @@
     </ClInclude>
     <ClInclude Include="gameObject.h">
       <Filter>Header Files\GameplayFoundation</Filter>
+    </ClInclude>
+    <ClInclude Include="color.h">
+      <Filter>Header Files\Graphics</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

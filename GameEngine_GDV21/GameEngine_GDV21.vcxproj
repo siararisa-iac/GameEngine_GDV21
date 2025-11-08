@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="color.cpp" />
     <ClCompile Include="engine.cpp" />
     <ClCompile Include="gameObject.cpp" />
     <ClCompile Include="graphics.cpp" />
@@ -130,6 +131,7 @@
     <ClCompile Include="vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="color.h" />
     <ClInclude Include="engine.h" />
     <ClInclude Include="gameObject.h" />
     <ClInclude Include="graphics.h" />

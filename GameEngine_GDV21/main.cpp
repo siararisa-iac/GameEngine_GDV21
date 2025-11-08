@@ -6,6 +6,8 @@ using namespace std;
 Vector3 enemyFormation;
 float speed = 0;
 float spacing = 1.5f;
+float scaleFactor = 0.25f;
+float colorFactor = 0.1f;
 vector<GameObject> enemies;
 int enemyCount = 10;
 
@@ -16,6 +18,8 @@ void Initialize()
 		GameObject enemy;
 		// set the position to have interval for each based on index
 		enemy.SetPosition(enemyFormation.x + (spacing * i), enemyFormation.y, 0);
+		enemy.SetScale(1, enemy.GetScale().y - (scaleFactor * i), 1);
+		enemy.SetColor(1 - (colorFactor * i), 1, 0);
 		// Add the enemy instance to the vector collection
 		enemies.push_back(enemy);
 	}
