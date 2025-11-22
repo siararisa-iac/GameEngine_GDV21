@@ -10,6 +10,8 @@ GameObject::GameObject()
 	scale.SetValue(1, 1, 1);
 	SetRotation(0, 0, 0, 0);
 	color.SetColor(1.0f, 1.0f, 1.0f, 1.0f);
+	// Initialize the collider
+	collider.SetDimension(position, scale);
 }
 
 void GameObject::SetPosition(Vector3 newPosition)
@@ -48,6 +50,16 @@ void GameObject::SetColor(float red, float green, float blue) {
 	this->color.SetColor(red, green, blue);
 }
 
+void GameObject::SetCollider(Vector3 position, Vector3 scale)
+{
+	collider.SetDimension(position, scale);
+}
+
+bool GameObject::CheckCollision(GameObject other)
+{
+	return collider.CheckCollision(other.collider);
+}
+
 Vector3 GameObject::GetScale() 
 {
 	return scale;
@@ -56,6 +68,11 @@ Vector3 GameObject::GetScale()
 Vector3 GameObject::GetPosition()
 {
 	return position;
+}
+
+Collider GameObject::GetCollider()
+{
+	return collider;
 }
 
 void GameObject::Draw()
@@ -68,6 +85,9 @@ void GameObject::Draw()
 	glColor4f(color.red, color.green, color.blue, color.alpha);
 	glutSolidCube(1.0f);
 	glPopMatrix();
+
+	// Update the collider here
+	collider.SetDimension(position, scale);
 }
 
 
@@ -81,5 +101,8 @@ void GameObject::DrawSphere(float radius, int slices, int stacks)
 	glColor4f(color.red, color.green, color.blue, color.alpha);
 	glutSolidSphere(radius, slices, stacks);
 	glPopMatrix();
+
+	// Update the collider here
+	collider.SetDimension(position, scale);
 }
 

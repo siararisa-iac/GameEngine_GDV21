@@ -32,13 +32,6 @@ void Initialize()
 
 void Update() 
 {
-	// Iterate through each enemy
-	for (int i = 0; i < enemies.size(); i++) 
-	{
-		// Make sure to render them ever frame
-		enemies[i].DrawSphere(1, 12, 12);
-	}
-
 	player.DrawSphere(1, 12, 12);
 
 	if (Input::GetKey('d')) 
@@ -62,6 +55,18 @@ void Update()
 		playerPosition += downMovement;
 	}
 	player.SetPosition(playerPosition);
+
+
+	// Iterate through each enemy
+	for (int i = 0; i < enemies.size(); i++)
+	{
+		// Make sure to render them ever frame
+		enemies[i].DrawSphere(1, 12, 12);
+		if (player.CheckCollision(enemies[i])) 
+		{
+			cout << "Collided with enemy at index " << i << endl;
+		}
+	}
 }
 
 int main(int argc, char** argv)

@@ -3,6 +3,7 @@
 
 #include "vector3.h"
 #include "color.h"
+#include "collider.h"
 
 class GameObject 
 {
@@ -16,10 +17,15 @@ public:
 	void SetRotation(float angle, Vector3 rotation);
 	void SetRotation(float angle, float x, float y, float z);
 	void SetColor(float red, float green, float blue);
+	void SetCollider(Vector3 position, Vector3 scale);
+	bool CheckCollision(GameObject other);
+	// Option to display a line renderer representing the position/scale of the collider
+	//void DrawCollider();
 
 	// Getters
 	Vector3 GetScale();
 	Vector3 GetPosition();
+	Collider GetCollider();
 
 	void Draw();
 	// Possible modification to this class
@@ -36,6 +42,7 @@ private:
 	Vector3 rotation;
 	float angle;
 	Color color;
+	Collider collider;
 };
 
 #endif
