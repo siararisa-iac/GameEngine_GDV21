@@ -37,7 +37,7 @@ Vector3 Vector3::operator+(const Vector3& other)
 {
 	Vector3 sum;
 	sum.x = this->x + other.x;
-	sum.y = this->x + other.x;
+	sum.y = this->y + other.y;
 	sum.z = this->z + other.z;
 	return sum;
 }
@@ -46,7 +46,7 @@ Vector3 Vector3::operator+=(const Vector3& other)
 {
 	Vector3 sum;
 	sum.x = this->x += other.x;
-	sum.y = this->x += other.x;
+	sum.y = this->y += other.y;
 	sum.z = this->z += other.z;
 	return sum;
 }

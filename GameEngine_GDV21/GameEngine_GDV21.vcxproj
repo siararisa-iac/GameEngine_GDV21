@@ -123,18 +123,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="collider.cpp" />
     <ClCompile Include="color.cpp" />
     <ClCompile Include="engine.cpp" />
     <ClCompile Include="gameObject.cpp" />
     <ClCompile Include="graphics.cpp" />
+    <ClCompile Include="input.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="collider.h" />
     <ClInclude Include="color.h" />
     <ClInclude Include="engine.h" />
     <ClInclude Include="gameObject.h" />
     <ClInclude Include="graphics.h" />
+    <ClInclude Include="input.h" />
     <ClInclude Include="vector3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

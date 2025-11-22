@@ -4,11 +4,13 @@
 using namespace std;
 
 Vector3 enemyFormation;
+Vector3 playerPosition;
 float speed = 0;
 float spacing = 1.5f;
 float scaleFactor = 0.25f;
 float colorFactor = 0.1f;
 vector<GameObject> enemies;
+GameObject player;
 int enemyCount = 10;
 
 void Initialize() 
@@ -23,6 +25,9 @@ void Initialize()
 		// Add the enemy instance to the vector collection
 		enemies.push_back(enemy);
 	}
+
+	playerPosition.SetValue(0, -5, 0);
+	player.SetPosition(playerPosition);
 }
 
 void Update() 
@@ -33,6 +38,30 @@ void Update()
 		// Make sure to render them ever frame
 		enemies[i].DrawSphere(1, 12, 12);
 	}
+
+	player.DrawSphere(1, 12, 12);
+
+	if (Input::GetKey('d')) 
+	{
+		Vector3 rightMovement(0.1f, 0, 0);
+		playerPosition += rightMovement;
+	}
+	if (Input::GetKey('a'))
+	{
+		Vector3 leftMovement (-0.1f, 0, 0);
+		playerPosition += leftMovement;
+	}
+	if (Input::GetKey('w'))
+	{
+		Vector3 topMovement(0, 0.1f, 0);
+		playerPosition += topMovement;
+	}
+	if (Input::GetKey('s'))
+	{
+		Vector3 downMovement(0, -0.1f, 0);
+		playerPosition += downMovement;
+	}
+	player.SetPosition(playerPosition);
 }
 
 int main(int argc, char** argv)

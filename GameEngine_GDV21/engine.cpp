@@ -1,5 +1,6 @@
 #include "engine.h"
 #include "graphics.h"
+#include "input.h"
 
 
 void PrepareEngine(int argc, char** argv)
@@ -15,6 +16,11 @@ void PrepareEngine(int argc, char** argv)
 	glutReshapeFunc(ChangeWindowSize);
 	//glutIdleFunc(renderScene); //Renders program at uncapped FPS
 	glutTimerFunc(16, Timer, 0); //Renders program at ~60fps :]
+
+	glutKeyboardFunc(&keyPressed);
+	glutKeyboardUpFunc(&keyPressedUp);
+	// you can also support special keyboard buttons using glutSpecialFunc
+	//glutSpecialFunc
 
 	// Setup Camera
 	gluLookAt(0.0f, 0.0f, 20.0f,
